@@ -2,6 +2,98 @@
 <html>
     <head>
         <title>Mi primer Proyecto Web</title>
+        <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        flex: 1; /* Empuja el footer hacia abajo */
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #1e1e1e; /* Fondo oscuro profesional */
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    footer hr {
+        border: 0;
+        border-top: 1px solid #333;
+        margin-bottom: 15px;
+    }
+
+    .footer-content p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    footer a {
+        color: #00bcd4; /* Color cian para destacar */
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    footer a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    /* Estilo para el contenedor del footer */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título de la sección */
+.github-section h4 {
+    margin-bottom: 10px;
+    color: #00bcd4; /* Cian para resaltar */
+    font-size: 1.1rem;
+}
+
+/* Quitar puntos de la lista y alinear en línea */
+.github-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre nombres */
+    margin-top: 5px;
+}
+
+/* Estilo de los enlaces */
+.github-section a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.github-section a:hover {
+    color: #00bcd4;
+    text-decoration: underline;
+}
+
+.contact-link {
+    margin-top: 15px;
+}
+</style>
     </head>
 <body>
     <h1>Bienvenido a mi proyecto</h1>
@@ -9,4 +101,23 @@
     <h2>Seccion nueva agregada</h2>
     <p>Esta seccion fue creada en una rama</p>
 </body>
+<footer>
+    <hr>
+    <div class="footer-content">
+        <p>&copy; 2026 Mi Proyecto Web - Desarrollado por <strong>Adrian Miranda, Miguel Quijano, David Porras</strong></p>
+        
+        <nav class="github-section">
+            <h4>Repositorios en GitHub</h4> <ul>
+                <li><a href="https://github.com/goldz9999" target="_blank">Adrian</a></li>
+                <li><a href="https://github.com/Miguel202520" target="_blank">Miguel</a></li>
+                <li><a href="https://github.com/Shiner178" target="_blank">David</a></li>
+            </ul>
+            <div class="contact-link">
+                <a href="mailto:correo@ejemplo.com">Contacto Directo</a>
+            </div>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
 </html>
