@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primer Proyecto Web</title>
     <style>
-        /* Estilos Globales y Base */
+        /* Estilos Globales */
         body {
             background-color: #000000;
             color: #ffffff;
@@ -14,61 +14,83 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            align-items: center;
         }
 
         /* Contenedor Principal */
         .container {
-            max-width: 700px;
+            max-width: 900px;
             width: 90%;
+            margin: 40px auto;
             text-align: center;
             border: 1px solid #1a1a1a;
             padding: 40px;
             border-radius: 15px;
             background-color: #0a0a0a;
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.05);
-            margin: 40px 0;
-            flex: 1; /* Permite que el footer se mantenga abajo */
+            flex: 1;
         }
 
         /* Encabezado */
         header {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             border-bottom: 2px solid #00ffff;
             padding-bottom: 20px;
         }
 
-        h1 {
-            color: #00ffff;
-            margin: 10px 0;
-            letter-spacing: 1px;
-            font-size: 2rem;
+        h1 { color: #00ffff; letter-spacing: 2px; font-size: 2.5rem; margin: 10px 0; }
+        h2 { color: #00ffff; margin-top: 40px; font-size: 1.8rem; border-left: 4px solid #00ffff; padding-left: 15px; text-align: left; }
+        p { font-size: 1.1rem; color: #cccccc; line-height: 1.8; text-align: justify; }
+        strong { color: #00ffff; text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
+
+        /* Estilo de la Imagen de Internet */
+        .project-image-container {
+            margin: 30px 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
         }
 
-        h2 {
-            color: #00ffff;
-            margin-top: 40px;
-            font-size: 1.5rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #cccccc;
-            line-height: 1.8;
-        }
-
-        strong {
-            color: #00ffff;
-            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-        }
-
-        /* Footer Profesional */
-        footer {
+        .project-image {
             width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* Cuadrícula de Tecnologías */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tech-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .tech-card:hover {
+            border-color: #00ffff;
+            transform: translateY(-5px);
+        }
+
+        .tech-card h3 { color: #00ffff; margin-top: 0; }
+
+        /* Footer */
+        footer {
             background-color: #0a0a0a;
             border-top: 1px solid #1a1a1a;
-            padding: 30px 0;
-            color: #ffffff;
+            padding: 40px 0;
+            margin-top: 40px;
         }
 
         .footer-content {
@@ -78,77 +100,66 @@
             padding: 0 20px;
         }
 
-        .footer-content p {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        /* Sección GitHub en Footer */
-        .github-section h4 {
-            margin-bottom: 15px;
-            color: #00ffff;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         .github-section ul {
             list-style: none;
             padding: 0;
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 15px 0;
+            margin: 20px 0;
         }
 
         .github-section a {
             text-decoration: none;
             color: #ffffff;
-            font-size: 0.95rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            border: 1px solid transparent;
-        }
-
-        .github-section a:hover {
-            color: #00ffff;
-            border-bottom: 1px solid #00ffff;
-        }
-
-        .contact-link {
-            margin-top: 20px;
-        }
-
-        .contact-link a {
-            color: #00ffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
             transition: 0.3s;
         }
 
-        .contact-link a:hover {
-            text-decoration: underline;
-            filter: brightness(1.2);
-        }
+        .github-section a:hover { color: #00ffff; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>Mi primer Proyecto Web</h1>
+            <h1>PROYECTO COLABORATIVO</h1>
+            <p style="text-align: center;">Desarrollo moderno impulsado por tecnología de vanguardia.</p>
         </header>
 
         <main>
-            <h2>Bienvenido a mi proyecto</h2>
-            <p>Proyecto Colaborativo desarrollado con <strong>GitHub</strong>.</p>
-            
-            <hr style="border: 0; border-top: 1px solid #1a1a1a; margin: 30px 0;">
-            
-            <h2>Sección nueva agregada</h2>
-            <p>Esta sección fue creada en una rama para practicar el flujo de trabajo profesional y el control de versiones.</p>
+            <div class="project-image-container">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/4186687781344066652_0" 
+                     alt="Programación moderna y futurista" 
+                     class="project-image">
+            </div>
+
+            <section>
+                <h2>Sobre el Proyecto</h2>
+                <p>
+                    Esta página representa el resultado de un esfuerzo conjunto para dominar las herramientas esenciales del desarrollo actual. 
+                    No es solo un sitio web, sino un entorno de pruebas donde hemos implementado <strong>metodologías ágiles</strong> y 
+                    flujos de trabajo basados en ramas (Git Flow).
+                </p>
+            </section>
+
+            <section>
+                <h2>Tecnologías Utilizadas</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h3>HTML5</h3>
+                        <p>Estructura semántica para una web accesible y bien organizada.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>CSS3</h3>
+                        <p>Diseño responsivo con Flexbox y Grid, aplicando una estética oscura moderna.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>Git & GitHub</h3>
+                        <p>Gestión de versiones y colaboración remota entre múltiples desarrolladores.</p>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -157,15 +168,11 @@
             <p>&copy; 2026 Mi Proyecto Web - Desarrollado por <strong>Adrian Miranda, Miguel Quijano & David Porras</strong></p>
             
             <nav class="github-section">
-                <h4>Repositorios en GitHub</h4>
                 <ul>
                     <li><a href="https://github.com/goldz9999" target="_blank">Adrian</a></li>
                     <li><a href="https://github.com/Miguel202520" target="_blank">Miguel</a></li>
                     <li><a href="https://github.com/Shiner178" target="_blank">David</a></li>
                 </ul>
-                <div class="contact-link">
-                    <a href="mailto:correo@ejemplo.com">📧 Contacto Directo</a>
-                </div>
             </nav>
         </div>
     </footer>
